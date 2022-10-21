@@ -1,6 +1,8 @@
-<html lang="en" dir="ltr"><head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
@@ -54,7 +56,7 @@ pointer-events: none;
 height: 100%;
 padding: 30px 0 150px 0;
 overflow: auto;
-line-height: 24px;
+line-height: 48px;
 }
 .sidebar.close .nav-links{
 overflow: visible;
@@ -90,6 +92,9 @@ transition: all 0.3s ease;
 }
 .sidebar .nav-links li.showMenu i.arrow{
 transform: rotate(-180deg);
+}
+.sidebar.close .nav-links{
+  line-height: 48px;
 }
 .sidebar.close .nav-links i.arrow{
 display: none;
@@ -272,6 +277,32 @@ overflow: hidden;
   overflow: hidden;
 }
 }
+.sidebar li.search-box{
+    border-radius: 6px;
+    background-color:#1d1b31;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+.sidebar li.search-box input{
+    height: 50%;
+    width: 50%;
+    border: none;
+    background-color:#1d1b31;
+    color:white;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.sidebar.close li.search-box{
+    border-radius: 6px;
+    background-color:#1d1b31;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    height:60px;
+    overflow: hidden;
+}
+
    </style>
  </head>
 <body>
@@ -284,18 +315,22 @@ overflow: hidden;
   <ul class="nav-links">
     <li>
       <a href="#">
-        <i class="bx bx-grid-alt"></i>
-        <span class="link_name">Home</span>
+        <img src="/resurse/237-2373015_logo-home-png-home-symbol-png-white.png"style="height:30;width:30px;margin-left:22px;">
+        <span class="link_name" style="margin-left:20px;height: 65px;">Home</span>
       </a>
       <ul class="sub-menu blank">
         <li><a class="link_name" href="#">Home</a></li>
       </ul>
     </li>
+    <li class="search-box">
+      <i class='bx bx-search icon'></i>
+      <input type="text2" placeholder="Search...">
+    </li>
     <li class="">
       <div class="iocn-link">
         <a href="#">
-          <i class="bx bx-collection"></i>
-          <span class="link_name">Nationality</span>
+          <img src="/resurse/united-g7ddd1b9c7_1920.png" style="height:35;width:35px;margin-left:22px;">
+          <span class="link_name"style="margin-left:20px;">Nationality</span>
         </a>
         <i class="bx bxs-chevron-down arrow"></i>
       </div>
@@ -312,8 +347,8 @@ overflow: hidden;
     <li>
       <div class="iocn-link">
         <a href="#">
-          <i class="bx bx-book-alt"></i>
-          <span class="link_name">Club</span>
+          <img src="/resurse/output-onlinepngtools (4).png" style="width:55px;margin-left:10px;">
+          <span class="link_name" style="margin-left:15px;">Club</span>
         </a>
         <i class="bx bxs-chevron-down arrow"></i>
       </div>
@@ -329,8 +364,8 @@ overflow: hidden;
     </li>
     <li>
       <a href="#">
-        <i class="bx bx-pie-chart-alt-2"></i>
-        <span class="link_name">Icons</span>
+        <img src="/resurse/114154.png"style="height:35px;width: 35px;margin-left:20px;">
+        <span class="link_name"style="margin-left:20px;height: 45px;margin-top:10px">Icons</span>
       </a>
       <ul class="sub-menu blank">
         <li><a class="link_name" href="#">Icons</a></li>
@@ -338,8 +373,8 @@ overflow: hidden;
     </li>
     <li>
       <a href="match.html">
-        <i class="bx bx-history"></i>
-        <span class="link_name">Live match</span>
+        <img src="/resurse/live_sport-512.webp"style="height:35px;width: 35px;margin-left:20px">
+        <span class="link_name"style="margin-left:20px;height:65px;margin-top:20px">Live match</span>
       </a>
       <ul class="sub-menu blank">
         <li><a class="link_name" href="#">Live match</a></li>
@@ -349,7 +384,7 @@ overflow: hidden;
       
       <a href="#">
         <i class="bx bx-cog"></i>
-        <span class="link_name">Setting</span>
+        <span class="link_name" style="height:65px;margin-top:15px">Setting</span>
       </a>
       <ul class="sub-menu blank">
         <li><a class="link_name" href="#">Setting</a></li>
@@ -360,8 +395,8 @@ overflow: hidden;
     <div class="profile-content">
     </div>
     <div class="name-job">
-      <div class="profile_name">Prem Shahi</div>
-      <div class="job">Web</div>
+      <div class="profile_name">Baicu & Ile</div>
+      <div class="job">Web developers</div>
     </div>
     <i class="bx bx-log-out"></i>
   </div>
@@ -392,5 +427,4 @@ sidebarBtn.addEventListener("click", ()=>
   sidebar.classList.toggle("close");
 });
 </script>
-
 </body></html>
